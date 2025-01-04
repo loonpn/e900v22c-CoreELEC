@@ -22,10 +22,12 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Runs a single command using the runners shell
-    - name: Send greeting
+    - name: Build
       run: |
         sudo apt-get update -y
         sudo apt-get install -y make gcc git texinfo gzip squashfs-tools
+        ls -l
+        chmod +x ./build.sh
         ./build.sh
     - name: Upload build output as artifact
       uses: actions/upload-artifact@v4
