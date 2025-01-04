@@ -1,6 +1,6 @@
 #! /bin/sh
-version="20.1-Nexus"
-source_img_name="CoreELEC-Amlogic-ng.arm-${version}-Generic"
+version="21.1.1-Omega"
+source_img_name="CoreELEC-Amlogic-ne.aarch64-${version}-Generic"
 source_img_file="${source_img_name}.img.gz"
 source_img_url="https://github.com/CoreELEC/CoreELEC/releases/download/${version}/${source_img_name}.img.gz"
 target_img_prefix="CoreELEC-Amlogic-ng.arm-${version}"
