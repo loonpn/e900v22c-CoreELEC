@@ -1,6 +1,6 @@
 #! /bin/sh
 version="21.1.1-Omega"
-source_img_name="CoreELEC-Amlogic-ne.aarch64-${version}-Generic"
+source_img_name="CoreELEC-Amlogic-ng.arm-${version}-Generic"
 source_img_file="${source_img_name}.img.gz"
 source_img_url="https://github.com/CoreELEC/CoreELEC/releases/download/${version}/${source_img_name}.img.gz"
 target_img_prefix="CoreELEC-Amlogic-ng.arm-${version}"
@@ -59,7 +59,6 @@ echo "Compressing SYSTEM image"
 sudo mksquashfs ${system_root} SYSTEM -comp lzo -Xalgorithm lzo1x_999 -Xcompression-level 9 -b 524288 -no-xattrs
 echo "Replacing SYSTEM image"
 sudo rm ${mount_point}/SYSTEM.md5
-sudo dd if=/dev/zero of=${mount_point}/SYSTEM
 sudo sync
 sudo rm ${mount_point}/SYSTEM
 sudo mv SYSTEM ${mount_point}/SYSTEM
